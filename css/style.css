@@ -1,0 +1,262 @@
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Very Dark Magenta: hsl(300, 43%, 22%)
+Soft Pink: hsl(333, 80%, 67%)
+
+### Neutral
+
+Dark Grayish Magenta: hsl(303, 10%, 53%)
+Light Grayish Magenta: hsl(300, 24%, 96%)
+White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Spartan](https://fonts.google.com/specimen/Spartan)
+- Weights: 400, 500, 700
+*/
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/*===========Layout===========*/
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Spartan',sans-serif;
+}
+main{
+    position: relative;
+    padding: 4em 2em;
+}
+.section1{
+    text-align: center;
+}
+.section2-rating-card{
+    line-height: .8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.4em 0;
+    padding: 1em 0;
+    border-radius: 12px;
+    background: var(--Light-Grayish-Magenta);
+}
+.section2-rating-stars{
+    width: 40%;
+    text-align: center;
+}
+.section3-card{
+    background: var(--Very-Dark-Magenta);
+    color: var(--White);
+    border-radius: 12px;
+    margin-bottom: 1.4em;
+}
+.section3-card-image_with_info{
+    display: flex;
+    align-items: center;
+    
+}
+.section3-card-person-info{
+    margin: 0 0 0 2em;
+}
+.section3-card{
+    padding: 3em 2em 1em;
+}
+
+
+/*=========Typography=========*/
+.section1-heading{
+    font-size: 2.5rem;
+    color: var(--Very-Dark-Magenta);
+    font-weight: 800;
+}
+.section1-info{
+    font-size: 1rem;
+    line-height: 2;
+    font-weight: 600;
+    color: var(--Dark-Grayish-Magenta);
+    margin-bottom: 2em;
+}
+.section2-rating-card-image{
+    width: 14%;
+}
+h3{
+    font-size: .8rem;
+    color: var(--Very-Dark-Magenta);
+}
+.section3-card-image{
+    border-radius: 50px;
+    width: 55px;
+    height: 55px;
+}
+h4{
+    font-size: 1.1rem;
+    margin-bottom: .3em;
+}
+.section3-card-person-name{
+    margin-top: 0;
+}
+.section3-card-person-verified{
+    margin: 0;
+    color: var(--Soft-Pink);
+    font-weight: 500;
+}
+.section3-card-info{
+    font-size: .95rem;
+    line-height: 1.8;
+    color: var(--White);
+}
+
+
+
+/*=========bg-pattern========*/
+.bg-design-mobile{
+    display: initial;
+}
+.bg-design-desktop{
+    display: none;
+}
+.bg-design-mobile1,
+.bg-design-mobile2{
+    position: absolute;
+}
+.bg-design-mobile1{
+    top: .1em;
+    left: -6em;
+    width: 100%;
+}
+.bg-design-mobile2{
+    bottom: 1em;
+    left: .1em;
+    width: 100%;
+}
+
+
+@media (min-width:576px){
+    body{
+        overflow:hidden;
+    }
+    main{
+        margin: 2em auto;
+        width: 80vw;
+    }
+    .top-section{
+        display: flex;
+    }
+    .section1{
+        width: 50%;
+        text-align: unset;
+    }
+    .section2{
+        width: 50%;
+    }
+    .section3{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .section2-rating-card{
+        margin: 0;
+        width: 80%;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    .section3{
+        margin-top: 2em;
+    }
+
+
+    .section3-card{
+        width: 30vw;
+    }
+    .middle-section3{
+        margin-left: 1.4em;
+        margin-right: 1.4em;
+    }
+    .section1-heading{
+        margin: 0;
+        width: 70%;
+    }
+    .section1-info{
+        width: 80%;
+    }
+    .section2-rating-card-image{
+        width: 10%;
+    }
+    .section2-rating-card-pos1{
+        margin: 1.3em 0 1.3em 3.3em;
+    }
+    .section2-rating-card-pos2{
+        margin-left: 7.3em;
+    }
+    .section3-card-pos2{
+        margin-left: 1.4em;
+        margin-right: 1.4em;
+        position: relative;
+        top: 1em;
+    }
+    .section3-card-pos3{
+        position: relative;
+        top: 2em;
+    }
+    .section3-card-info{
+        font-size: .8rem;
+    }
+    h4{
+        font-size: .85rem;
+    }
+    .section3-card-image{
+        width: 45px;
+        height: 45px;
+    }
+
+    /*=========bg-pattern========*/
+    .bg-design-mobile{
+        display: none;
+    }
+    .bg-design-desktop{
+        display: initial;
+    }
+    .bg-design-desktop1,
+    .bg-design-desktop2{
+        position: absolute;
+    }
+    .bg-design-desktop1{
+        top: -4em;
+        left: -15em;
+        width: 65%;
+    }
+    .bg-design-desktop2{
+        bottom: -8em;
+        right: -16em;
+        width: 110%;
+    }
+}
